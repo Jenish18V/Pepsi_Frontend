@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi</title>
+    <link rel="stylesheet" href="/CSS/pepsi(css).css">
+    <link rel="icon" href="/Images/logo.png">
+</head>
+<body >
+    <section class="backgroundcolor">
+        
+        <header>
+            <a href="#" class="logo"><img src="/Images/logo.png"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br>I<span> Like</span></h2>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="/Images/pepsi001.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="/Images/pepsi001.png" onclick="imgSlider('/Images/pepsi001.png');changeBackgroundColor('#4165a8')"></li>
+            <li><img src="/Images/pepsi002.png" onclick="imgSlider('/Images/pepsi002.png');changeBackgroundColor('#5a5c5c')"></li>
+            <li><img src="/Images/pepsi003.png" onclick="imgSlider('/Images/pepsi003.png');changeBackgroundColor('#1f1d1d')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="/Images/facebook.png"></a></li>
+            <li><a href="#"><img src="/Images/instagram.png"></a></li>
+            <li><a href="#"><img src="/Images/twitter.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src= anything;
+        }
+        function changeBackgroundColor(color){
+            const backgorundcolor = document.querySelector('.backgroundcolor');
+            backgorundcolor.style.background = color;
+        }
+        
+    </script>
+</body>
+</html>
